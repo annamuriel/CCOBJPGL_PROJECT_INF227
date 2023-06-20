@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Beans">
+   <children>
+      <ImageView fx:id="imgb1" fitHeight="600.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/beansbackground.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="24.0" layoutY="227.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #793720;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgb1" fitHeight="169.0" fitWidth="167.0" layoutX="17.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/barakoeh.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameb1" layoutX="56.0" layoutY="218.0" text="Bro Beans" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceb1" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buy1" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="240.0" layoutY="227.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #793720;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgb2" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/brobeans.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameb2" layoutX="55.0" layoutY="218.0" text="Barako-EH" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceb2" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buy2" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="678.0" layoutY="227.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #793720;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgb4" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jordanbeans.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameb4" layoutX="43.0" layoutY="218.0" text="Jordan Beans" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceb4" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buy4" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="896.0" layoutY="227.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #793720;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgb5" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mrbeans.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="priceb5" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameb5" layoutX="29.0" layoutY="218.0" text="Mr. Beans Coffee" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buy5" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="460.0" layoutY="227.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #793720;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgb3" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/coffeellera.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameb3" layoutX="54.0" layoutY="218.0" text="Coffeellera" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceb3" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#ffcba0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buy3" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="581.0" layoutY="104.0" text="B     E     A     N     S" textFill="#793720">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font></Label>
+      <Button fx:id="aboutus" layoutX="186.0" layoutY="22.0" mnemonicParsing="false" onAction="#aboutus" style="-fx-background-color: 000000;" text="ABOUT US" textFill="#793720">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="cartbutton" layoutX="447.0" layoutY="22.0" mnemonicParsing="false" onAction="#gotocart" style="-fx-background-color: img;" text="CART" textFill="#793720">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="menubutton" layoutX="331.0" layoutY="22.0" mnemonicParsing="false" onAction="#menu" style="-fx-background-color: 000000;" text="MENU" textFill="#793720">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

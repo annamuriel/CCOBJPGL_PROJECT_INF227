@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/adient.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="cartbutton" layoutX="496.0" layoutY="14.0" mnemonicParsing="false" onAction="#gotocart" style="-fx-background-color: img;" text="CART" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="name2" layoutX="54.0" layoutY="226.0" prefHeight="62.0" prefWidth="431.0" text="Welcome to the world of coffee!" textFill="#f3e3d3">
+         <font>
+            <Font name="Corbel Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="name3" layoutX="78.0" layoutY="288.0" prefHeight="20.0" prefWidth="353.0" text="- a beverage that has the power" textFill="#f3e3d3">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="name4" layoutX="89.0" layoutY="313.0" prefHeight="20.0" prefWidth="305.0" text="to make or break your day!" textFill="#f3e3d3">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="menubtn" layoutX="102.0" layoutY="355.0" mnemonicParsing="false" onAction="#gottomenu" style="-fx-border-color: #f3e3d3; -fx-background-color: #8B5E3D;" text="Discover our flavors!" textFill="#f3e3d3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="menubutton" layoutX="357.0" layoutY="14.0" mnemonicParsing="false" onAction="#menu" style="-fx-background-color: 000000;" text="MENU" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="aboutus" layoutX="195.0" layoutY="14.0" mnemonicParsing="false" onAction="#aboutus" style="-fx-background-color: 000000;" text="ABOUT US" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
