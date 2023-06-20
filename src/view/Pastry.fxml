@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Pastry">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pastry.png" />
+         </image></ImageView>
+      <Pane layoutX="14.0" layoutY="217.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #D7AC87;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgp18" fitHeight="169.0" fitWidth="167.0" layoutX="17.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/waffle.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="namep18" layoutX="56.0" layoutY="218.0" text="Tia-Waffle" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="pricep18" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buyp18" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="230.0" layoutY="217.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #D7AC87;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgp19" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sausagebacon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="namep19" layoutX="19.0" layoutY="217.0" text="Sausage and Bacon" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="pricep19" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buyp19" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="668.0" layoutY="217.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #D7AC87;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgp21" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ensaymada.png" />
+               </image></ImageView>
+            <Label fx:id="namep21" layoutX="43.0" layoutY="218.0" text="Glazed Donut" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="pricep21" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buyp21" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="450.0" layoutY="217.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #D7AC87;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgp20" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/donut.png" />
+               </image></ImageView>
+            <Label fx:id="namep20" layoutX="43.0" layoutY="218.0" text="Glazed Donut" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="pricep20" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buyp20" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="886.0" layoutY="217.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-radius: 25; -fx-background-color: #D7AC87;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="imgp22" fitHeight="167.0" fitWidth="167.0" layoutX="17.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/croissant.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pricep22" layoutX="77.0" layoutY="245.0" text="15.00" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="namep22" layoutX="66.0" layoutY="218.0" text="Crossaint" textFill="#4d271a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="Buyp22" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #8B5E3D;" text="Buy" textFill="#ffe7d6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="aboutus" layoutX="714.0" layoutY="31.0" mnemonicParsing="false" onAction="#aboutus" style="-fx-background-color: 000000;" text="ABOUT US" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="menubutton" layoutX="826.0" layoutY="31.0" mnemonicParsing="false" onAction="#gottomenu" style="-fx-background-color: 000000;" text="MENU" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="cartbutton" layoutX="900.0" layoutY="31.0" mnemonicParsing="false" onAction="#gotocart" style="-fx-background-color: img;" text="CART" textFill="#f3e3d3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="63.0" layoutY="69.0" prefHeight="87.0" prefWidth="753.0" text="P     A     S     T     R     Y" textFill="#ffcba1">
+         <font>
+            <Font name="Javanese Text" size="66.0" />
+         </font></Label>
+   </children>
+</Pane>
