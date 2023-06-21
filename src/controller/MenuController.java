@@ -20,6 +20,9 @@ public class MenuController implements Initializable {
     @FXML
     Button Coffee, Beans, Pastry, Accessories, cartbutton, homebutton, aboutusbtn;
 
+
+    FXMLLoader loader;
+
     @FXML
     private Stage stage;
 
@@ -27,19 +30,22 @@ public class MenuController implements Initializable {
     private Scene scene;
 
     @FXML
-    private Parent root;
-
-    FXMLLoader loader;
+    static Parent homeRoot = null;
 
     @FXML
-    CheckoutController checkoutController;
+    static MenuController menuController;
 
     @FXML
-    HomeController homeController;
-
+    static CheckoutController checkoutController;
 
     @FXML
-    AboutUsController AboutUsController;
+    static AboutUsController AboutUsController;
+
+    @FXML
+    static ReceiptController receiptController;
+
+    @FXML
+    static HomeController HomeController;
 
 
 
@@ -47,28 +53,20 @@ public class MenuController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        try {
-            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-            root = loader.load();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-
-        // Clears all items in Checkout.fxml
-        checkoutController = loader.getController();
-        checkoutController.myvbox.getChildren().removeAll(checkoutController.myvbox.getChildren());
     }
 
   
     // Goes to Checkout.fxml
     public void gotocart(ActionEvent event) throws IOException {
 
-        Scene scene = new Scene(root);
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
+    }
     public void gottocoffee(ActionEvent event) throws IOException {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

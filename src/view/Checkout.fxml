@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="264.0" layoutY="129.0" mnemonicParsing="false" style="-fx-background-color: #4D271A;" text="CHECKOUT" textFill="WHITE">
+            <Button fx:id="checkoutbtn" layoutX="264.0" layoutY="129.0" mnemonicParsing="false" onAction="#checkout" style="-fx-background-color: #4D271A;" text="CHECKOUT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -35,7 +35,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="gotomenu" layoutX="150.0" layoutY="196.0" mnemonicParsing="false" onAction="#gottomenu" style="-fx-background-color: #4D271A;" text="CHECKOUT" textFill="WHITE">
+            <Button fx:id="gotomenu" layoutX="114.0" layoutY="195.0" mnemonicParsing="false" onAction="#gottomenu" style="-fx-background-color: #4D271A;" text="GO BACK TO MENU" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -48,19 +48,119 @@
                <children>
                   <VBox fx:id="myvbox" layoutX="6.0" layoutY="-7.0" prefHeight="5000.0" prefWidth="796.0" style="-fx-background-color: #D7AC87;">
                      <children>
-                        <Pane fx:id="pane14" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                        <Pane fx:id="pane19" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc14" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgp19" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/brobeans.png" />
+                                    <Image url="@../images/donut.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec14" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="pricep19" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec14" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="namep19" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox19" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane20" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                           <children>
+                              <ImageView fx:id="imgp20" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/croissant.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="pricecp20" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="namep20" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox20" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane12" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                           <children>
+                              <ImageView fx:id="imgc12" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/img3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="pricec12" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="namec12" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox12" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane22" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                           <children>
+                              <ImageView fx:id="imgp22" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/waffle.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="pricep22" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="namep22" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox22" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane21" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                           <children>
+                              <ImageView fx:id="imgp21" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sausagebacon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="pricep21" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="namep21" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox21" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane14" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
+                           <children>
+                              <ImageView fx:id="imgb14" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/brobeans.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="priceb14" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nameb14" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -70,17 +170,17 @@
                         </Pane>
                         <Pane fx:id="pane13" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc13" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgb13" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/barakoeh.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec13" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="priceb13" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec13" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="nameb13" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -308,39 +408,19 @@
                               <ChoiceBox fx:id="choicebox11" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
                            </children>
                         </Pane>
-                        <Pane fx:id="pane12" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
-                           <children>
-                              <ImageView fx:id="imgc12" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/img3.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="pricec12" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="namec12" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="choicebox12" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
                         <Pane fx:id="pane15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc15" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgb15" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/coffeellera.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec15" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="priceb15" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec15" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="nameb15" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -350,17 +430,17 @@
                         </Pane>
                         <Pane fx:id="pane16" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc16" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgb16" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/jordanbeans.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec16" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="priceb16" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec16" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="nameb16" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -370,17 +450,17 @@
                         </Pane>
                         <Pane fx:id="pane17" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc17" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgb17" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/mrbeans.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec17" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="priceb17" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec17" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="nameb17" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -390,102 +470,22 @@
                         </Pane>
                         <Pane fx:id="pane18" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
                            <children>
-                              <ImageView fx:id="imgc18" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgp18" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/ensaymada.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="pricec18" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
+                              <Label fx:id="pricep18" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="namec171" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
+                              <Label fx:id="namep18" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                               <ChoiceBox fx:id="choicebox171" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="pane19" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
-                           <children>
-                              <ImageView fx:id="imgc19" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/donut.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="pricec19" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="namec19" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="choicebox19" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="pane20" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
-                           <children>
-                              <ImageView fx:id="imgc20" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/croissant.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="pricec20" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="namec20" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="choicebox20" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="pane21" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
-                           <children>
-                              <ImageView fx:id="imgc21" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/sausagebacon.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="pricec21" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="namec21" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="choicebox21" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="pane22" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #D7AC87;">
-                           <children>
-                              <ImageView fx:id="imgc22" fitHeight="116.0" fitWidth="119.0" layoutX="56.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/waffle.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="pricec22" layoutX="201.0" layoutY="14.0" text="5.00" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="namec22" layoutX="201.0" layoutY="37.0" text="Bedroom Lamp" textFill="#4a4141">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="choicebox22" layoutX="201.0" layoutY="64.0" prefWidth="150.0" />
                            </children>
                         </Pane>
                      </children>

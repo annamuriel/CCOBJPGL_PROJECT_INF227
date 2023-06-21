@@ -1,11 +1,5 @@
 package controller;
 
-import model.Pastry.CheesyEnsaymada;
-import model.Pastry.GlazedDonut;
-import model.Pastry.PichiCroissant;
-import model.Pastry.SausageBacon;
-import model.Pastry.TiaWaffle;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,7 +29,7 @@ public class Pastry implements Initializable {
     ImageView imgp18, imgp19, imgp20, imgp21, imgp22;
 
     @FXML
-    Button buyp18, Buyp19, Buyp20, Buyp21, Buyp22, aboutus, menubutton, cartbutton;
+    Button Buyp18, Buyp19, Buyp20, Buyp21, Buyp22, aboutus, menubutton, cartbutton;
 
     @FXML
     private Stage stage;
@@ -43,92 +37,64 @@ public class Pastry implements Initializable {
     @FXML
     private Scene scene;
 
+    @FXML
+    static Parent homeRoot = null;
 
     @FXML
-    private Parent root;
-
-    FXMLLoader loader;
+    static MenuController menuController;
 
     @FXML
-    MenuController menuController;
+    static CheckoutController checkoutController;
 
     @FXML
-    CheckoutController checkoutController;
+    static AboutUsController AboutUsController;
 
-    static CheesyEnsaymada cheesyensaymada = new CheesyEnsaymada();
-    static GlazedDonut glazeddonut = new GlazedDonut();
-    static PichiCroissant pichicroissant = new PichiCroissant();
-    static SausageBacon sausagebacon = new SausageBacon();
-    static TiaWaffle tiawaffle = new TiaWaffle();
+    @FXML
+    static ReceiptController receiptController;
+    
+    @FXML
+    static HomeController HomeController;
 
+
+    
      @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         // ============== cheesy ensaymada ==================//
-        cheesyensaymada.setProductName("Cheesy Ensaymada");
-        namep18.setText(cheesyensaymada.getProductName());
 
-        cheesyensaymada.setProductPrice(5.00);
-        pricep18.setText(Double.toString(cheesyensaymada.getProductPrice()));
-
-        cheesyensaymada.setProductImage("images/ensaymada.png");
-        Image cheesyensaymadapastry = new Image(cheesyensaymada.getProductImage());
-        imgp18.setImage(cheesyensaymadapastry);
+        namep18.setText(LoginController.cheesyensaymada.getProductName());
+        pricep18.setText(Double.toString(LoginController.cheesyensaymada.getProductPrice()));
+        Image cheesyensaymadaa = new Image(LoginController.cheesyensaymada.getProductImage());
+        imgp18.setImage(cheesyensaymadaa);
 
         // ============== glazed donut ==================//
-        glazeddonut.setProductName("Glazed Donut");
-        namep19.setText(glazeddonut.getProductName());
 
-        glazeddonut.setProductPrice(5.00);
-        pricep19.setText(Double.toString(glazeddonut.getProductPrice()));
-
-        glazeddonut.setProductImage("images/donut.png");
-        Image glazeddonutpastry = new Image(glazeddonut.getProductImage());
-        imgp19.setImage(glazeddonutpastry);
+        namep19.setText(LoginController.glazeddonut.getProductName());
+        pricep19.setText(Double.toString(LoginController.glazeddonut.getProductPrice()));
+        Image glazeddonutt = new Image(LoginController.glazeddonut.getProductImage());
+        imgp19.setImage(glazeddonutt);;
 
         // ============== pichi croissant ==================//
-        pichicroissant.setProductName("Pichi Croissant");
-        namep20.setText(pichicroissant.getProductName());
 
-        pichicroissant.setProductPrice(5.00);
-        pricep20.setText(Double.toString(pichicroissant.getProductPrice()));
-
-        pichicroissant.setProductImage("images/croissant.png");
-        Image pichicroissantpastry = new Image(pichicroissant.getProductImage());
-        imgp20.setImage(pichicroissantpastry);
+        namep20.setText(LoginController.pichicroissant.getProductName());
+        pricep20.setText(Double.toString(LoginController.pichicroissant.getProductPrice()));
+        Image pichicroissantt = new Image(LoginController.pichicroissant.getProductImage());
+        imgp20.setImage(pichicroissantt);
 
         // ============== Sausage Bacon ==================//
-        sausagebacon.setProductName("Sausage Bacon");
-        namep21.setText(sausagebacon.getProductName());
 
-        sausagebacon.setProductPrice(5.00);
-        pricep21.setText(Double.toString(sausagebacon.getProductPrice()));
-
-        sausagebacon.setProductImage("images/sausagebacon.png");
-        Image sausagebaconpastry = new Image(sausagebacon.getProductImage());
-        imgp21.setImage(sausagebaconpastry);
+        namep21.setText(LoginController.sausagebacon.getProductName());
+        pricep21.setText(Double.toString(LoginController.sausagebacon.getProductPrice()));
+        Image sausagebaconn = new Image(LoginController.sausagebacon.getProductImage());
+        imgp21.setImage(sausagebaconn);
 
              // ============== Tia Waffle ==================//
-        tiawaffle.setProductName("Tia Waffle");
-        namep22.setText(tiawaffle.getProductName());
+      
+        namep22.setText(LoginController.tiawaffle.getProductName());
+        pricep22.setText(Double.toString(LoginController.tiawaffle.getProductPrice()));
+        Image tiawafflee = new Image(LoginController.tiawaffle.getProductImage());
+        imgp22.setImage(tiawafflee);
 
-        tiawaffle.setProductPrice(5.00);
-        pricep22.setText(Double.toString(tiawaffle.getProductPrice()));
-
-        tiawaffle.setProductImage("images/waffle.png");
-        Image tiawafflepastry = new Image(tiawaffle.getProductImage());
-        imgp22.setImage(tiawafflepastry);
-
-        try {
-            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-            root = loader.load();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-
-        // Clears all items in Checkout.fxml
-        checkoutController = loader.getController();
-        checkoutController.myvbox.getChildren().removeAll(checkoutController.myvbox.getChildren());
     }
 
     public void buy(ActionEvent event) throws IOException {
@@ -137,42 +103,41 @@ public class Pastry implements Initializable {
 
         Button sourceButton = (Button) event.getSource();
 
-        // If addtocart button is pressed, set product status to true
-        if (sourceButton.equals(buyp18)) {
-             cheesyensaymada.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane18);
+        if (sourceButton.equals(Buyp18)) {
+            LoginController.cheesyensaymada.setProductStatus(true);
+            LoginController.cheesyensaymada.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane1);
         }
 
-        else if (sourceButton == (Buyp19)) {
-            glazeddonut.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane19);
+        else if (sourceButton == Buyp19) {
+            LoginController.glazeddonut.setProductStatus(true);
+            LoginController.glazeddonut.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane2);
         }
 
-        else if (sourceButton == (Buyp20)) {
-            pichicroissant.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane20);
+        else if (sourceButton == Buyp20) {
+            LoginController.pichicroissant.setProductStatus(true);
+            LoginController.pichicroissant.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane3);
         }
 
-        else if (sourceButton == (Buyp21)) {
-            sausagebacon.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane21);
+        else if (sourceButton == Buyp21) {
+            LoginController.sausagebacon.setProductStatus(true);
+            LoginController.sausagebacon.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane3);
         }
-        if (sourceButton.equals(Buyp22)) {
-            tiawaffle.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane22);
+
+        else if (sourceButton == Buyp22) {
+            LoginController.tiawaffle.setProductStatus(true);
+            LoginController.tiawaffle.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane3);
         }
+
+        LoginController.cart.showItems();
             
         }
 
-        // Goes to Checkout.fxml
-        public void gotocart(ActionEvent event) throws IOException {
-
-        Scene scene = new Scene(root);
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-        }
-
+        
         public void gottomenu(ActionEvent event) throws IOException {
         
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -191,6 +156,20 @@ public class Pastry implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+    }
+
+    public void gotocart(ActionEvent event) throws IOException {
+
+        // Load items to cart before switching to checkout page
+        LoginController.checkoutController.showItems(LoginController.cart.getItemList());
+
+        // Set initial total amount in checkout page
+        LoginController.checkoutController.getInitialAmount();
+
+        Scene scene = new Scene(LoginController.homeRoot);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

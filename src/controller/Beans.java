@@ -1,11 +1,5 @@
 package controller;
 
-import model.Beans.BarakoEH;
-import model.Beans.BroBeans;
-import model.Beans.Coffeellera;
-import model.Beans.JordanBeans;
-import model.Beans.MrBeansCoffee;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,87 +38,67 @@ public class Beans implements Initializable {
     private Scene scene;
 
     @FXML
-    private Parent root;
+    static Parent homeRoot = null;;
 
     FXMLLoader loader;
 
     @FXML
-    CheckoutController checkoutController;
+    static MenuController menuController;
 
-    static BarakoEH barakoeh = new BarakoEH();
-    static BroBeans brobeans = new BroBeans();
-    static Coffeellera coffeellera = new Coffeellera();
-    static JordanBeans jordanbeans = new JordanBeans();
-    static MrBeansCoffee mrbeans = new MrBeansCoffee();
+    @FXML
+    static CheckoutController checkoutController;
+
+    @FXML
+    static AboutUsController AboutUsController;
+
+    @FXML
+    static ReceiptController receiptController;
+    
+    @FXML
+    static HomeController HomeController;
+    
+
+
+  
 
      @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         // ============== barako eh ==================//
-        barakoeh.setProductName("Barako-EH");
-        nameb13.setText(barakoeh.getProductName());
 
-        barakoeh.setProductPrice(5.00);
-        priceb13.setText(Double.toString(barakoeh.getProductPrice()));
-
-        barakoeh.setProductImage("images/barakoeh.png");
-        Image barakoehBeans = new Image(barakoeh.getProductImage());
-        imgb13.setImage(barakoehBeans);
+        nameb13.setText(LoginController.barakoeh.getProductName());
+        priceb13.setText(Double.toString(LoginController.barakoeh.getProductPrice()));
+        Image barakoehe = new Image(LoginController.barakoeh.getProductImage());
+        imgb13.setImage(barakoehe);
 
         // ============== bro beans ==================//
-        brobeans.setProductName("Bro Beans");
-        nameb14.setText(brobeans.getProductName());
-
-        brobeans.setProductPrice(5.00);
-        priceb14.setText(Double.toString(brobeans.getProductPrice()));
-
-        brobeans.setProductImage("images/brobeans.png");
-        Image brobeansBeans = new Image(brobeans.getProductImage());
-        imgb14.setImage(brobeansBeans);
+        
+        nameb14.setText(LoginController.brobeans.getProductName());
+        priceb14.setText(Double.toString(LoginController.brobeans.getProductPrice()));
+        Image brobeanie = new Image(LoginController.brobeans.getProductImage());
+        imgb14.setImage(brobeanie);
 
         // ============== coffeellera ==================//
-        coffeellera.setProductName("Coffeelera");
-        nameb15.setText(coffeellera.getProductName());
-
-        coffeellera.setProductPrice(5.00);
-        priceb15.setText(Double.toString(coffeellera.getProductPrice()));
-
-        coffeellera.setProductImage("images/coffeellera.png");
-        Image coffeelleraBeans = new Image(coffeellera.getProductImage());
-        imgb15.setImage(coffeelleraBeans);
+     
+        nameb15.setText(LoginController.coffeellera.getProductName());
+        priceb15.setText(Double.toString(LoginController.coffeellera.getProductPrice()));
+        Image coffeelleraa = new Image(LoginController.coffeellera.getProductImage());
+        imgb15.setImage(coffeelleraa);
 
         // ============== jordan beans ==================//
-        jordanbeans.setProductName("Jordan Beans");
-        nameb16.setText(jordanbeans.getProductName());
+    
+        nameb16.setText(LoginController.jordanbeans.getProductName());
+        priceb16.setText(Double.toString(LoginController.jordanbeans.getProductPrice()));
+        Image jordanbeanie = new Image(LoginController.jordanbeans.getProductImage());
+        imgb16.setImage(jordanbeanie);
 
-        jordanbeans.setProductPrice(5.00);
-        priceb16.setText(Double.toString(jordanbeans.getProductPrice()));
+        // ============== mr beans ==================//
 
-        jordanbeans.setProductImage("images/jordanbeans.png");
-        Image jordanbeansBeans = new Image(jordanbeans.getProductImage());
-        imgb16.setImage(jordanbeansBeans);
+        nameb17.setText(LoginController.mrbeans.getProductName());
+        priceb17.setText(Double.toString(LoginController.mrbeans.getProductPrice()));
+        Image mrbeanie = new Image(LoginController.mrbeans.getProductImage());
+        imgb17.setImage(mrbeanie);
 
-             // ============== mr beans ==================//
-        mrbeans.setProductName("Mr. Beans");
-        nameb17.setText(mrbeans.getProductName());
-
-        mrbeans.setProductPrice(5.00);
-        priceb17.setText(Double.toString(mrbeans.getProductPrice()));
-
-        mrbeans.setProductImage("images/mrbeans.png");
-        Image mrbeansBeans = new Image(mrbeans.getProductImage());
-        imgb17.setImage(mrbeansBeans);
-
-        try {
-            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-            root = loader.load();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-
-        // Clears all items in Checkout.fxml
-        checkoutController = loader.getController();
-        checkoutController.myvbox.getChildren().removeAll(checkoutController.myvbox.getChildren());
     }
 
     public void buy(ActionEvent event) throws IOException {
@@ -133,41 +107,55 @@ public class Beans implements Initializable {
 
         Button sourceButton = (Button) event.getSource();
 
-        // If addtocart button is pressed, set product status to true
-        if (sourceButton.equals(Buyb13)) {
-             barakoeh.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane13);
+           // If addtocart button is pressed, set product status to true
+           if (sourceButton.equals(Buyb13)) {
+            LoginController.barakoeh.setProductStatus(true);
+            LoginController.barakoeh.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane13);
         }
 
-        else if (sourceButton == (Buyb14)) {
-            brobeans.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane14);
+        else if (sourceButton == Buyb14) {
+            LoginController.brobeans.setProductStatus(true);
+            LoginController.brobeans.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane14);
         }
 
-        else if (sourceButton == (Buyb15)) {
-            coffeellera.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane15);
+        else if (sourceButton == Buyb15) {
+            LoginController.coffeellera.setProductStatus(true);
+            LoginController.coffeellera.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane15);
         }
 
-        else if (sourceButton == (Buyb16)) {
-            jordanbeans.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane16);
-        }
-        if (sourceButton.equals(Buyb17)) {
-            mrbeans.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane17);
-
-        }
+        else if (sourceButton == Buyb16) {
+            LoginController.jordanbeans.setProductStatus(true);
+            LoginController.jordanbeans.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane16);
         }
 
-        // Goes to Checkout.fxml
-        public void gotocart(ActionEvent event) throws IOException {
+        else if (sourceButton == Buyb17) {
+            LoginController.mrbeans.setProductStatus(true);
+            LoginController.mrbeans.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane17);
+        }
 
-        Scene scene = new Scene(root);
+        LoginController.cart.showItems();
+        }
+
+    // Goes to Checkout.fxml
+    public void gotocart(ActionEvent event) throws IOException {
+
+        // Load items to cart before switching to checkout page
+        LoginController.checkoutController.showItems(LoginController.cart.getItemList());
+
+        // Set initial total amount in checkout page
+        LoginController.checkoutController.getInitialAmount();
+
+        Scene scene = new Scene(LoginController.homeRoot);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-        }
+    }
+
 
         public void gottomenu(ActionEvent event) throws IOException {
         

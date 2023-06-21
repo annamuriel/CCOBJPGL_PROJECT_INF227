@@ -1,18 +1,5 @@
 package controller;
 
-import model.Coffee.Affogato;
-import model.Coffee.Breve;
-import model.Coffee.Cortado;
-import model.Coffee.Cuppocino;
-import model.Coffee.Espresso;
-import model.Coffee.FlatWhite;
-import model.Coffee.IcedCoffee;
-import model.Coffee.Longblack;
-import model.Coffee.Macchiato;
-import model.Coffee.MatchaLatte;
-import model.Coffee.Mocha;
-import model.Coffee.Vienna;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,6 +30,9 @@ public class Coffee implements Initializable {
     @FXML
     Button Buy1, Buy2, Buy3, Buy4, Buy5, Buy6, Buy7, Buy8, Buy9, Buy10, Buy11, Buy12, cartbutton, aboutusbtn ;
 
+
+    FXMLLoader loader;
+
     @FXML
     private Stage stage;
 
@@ -50,182 +40,114 @@ public class Coffee implements Initializable {
     private Scene scene;
 
     @FXML
-    private Parent root;
-
-    FXMLLoader loader;
+    static Parent homeRoot = null;
 
     @FXML
-    MenuController menuController;
+    static MenuController menuController;
 
     @FXML
-    CheckoutController checkoutController;
+    static CheckoutController checkoutController;
 
     @FXML
-    AboutUsController AboutUsController;
+    static AboutUsController AboutUsController;
 
-    static Longblack longblack = new Longblack();
-    static Espresso espresso = new Espresso();
-    static Macchiato macchiato = new Macchiato();
-    static Cuppocino cuppocino = new Cuppocino();
-    static Vienna vienna = new Vienna();
-    static IcedCoffee icedcoffee = new IcedCoffee();
-    static Cortado cortado = new Cortado();
-    static Breve breve = new Breve();
-    static Mocha mocha = new Mocha();
-    static Affogato affogato = new Affogato();
-    static FlatWhite flatwhite = new FlatWhite();
-    static MatchaLatte matchalatte = new MatchaLatte();
+    @FXML
+    static ReceiptController receiptController;
+ 
+    @FXML
+    static HomeController HomeController;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         // ============== vienna ==================//
-        longblack.setProductName("Long Black");
-        namec1.setText(longblack.getProductName());
 
-        longblack.setProductPrice(5.00);
-        pricec1.setText(Double.toString(longblack.getProductPrice()));
-
-        longblack.setProductImage("images/img1.png");
-        Image longblackcoffee = new Image(longblack.getProductImage());
+        namec1.setText(LoginController.longblack.getProductName());
+        pricec1.setText(Double.toString(LoginController.longblack.getProductPrice()));
+        Image longblackcoffee = new Image(LoginController.longblack.getProductImage());
         imgc1.setImage(longblackcoffee);
+
 
         // ============== Espresso ==================//
 
-        espresso.setProductName("Espresso");
-        namec2.setText(espresso.getProductName());
-
-        espresso.setProductPrice(10.00);
-        pricec2.setText(Double.toString(espresso.getProductPrice()));
-
-        espresso.setProductImage("images/img2.png");
-        Image espressocoffee = new Image(espresso.getProductImage());
+        namec2.setText(LoginController.espresso.getProductName());
+        pricec2.setText(Double.toString(LoginController.espresso.getProductPrice()));
+        Image espressocoffee = new Image(LoginController.espresso.getProductImage());
         imgc2.setImage(espressocoffee);
 
         // ============== Macchiato ==================//
-        macchiato.setProductName("Macchiato");
-        namec3.setText(macchiato.getProductName());
 
-        macchiato.setProductPrice(15.00);
-        pricec3.setText(Double.toString(macchiato.getProductPrice()));
-
-        macchiato.setProductImage("images/img3.png");
-        Image macchiatocoffee = new Image(macchiato.getProductImage());
+        namec3.setText(LoginController.macchiato.getProductName());
+        pricec3.setText(Double.toString(LoginController.macchiato.getProductPrice()));
+        Image macchiatocoffee = new Image(LoginController.macchiato.getProductImage());
         imgc3.setImage(macchiatocoffee);
 
         // ============== Cuppocino ==================//
 
-        cuppocino.setProductName("Cuppocino");
-        namec4.setText(cuppocino.getProductName());
-
-        cuppocino.setProductPrice(35.00);
-        pricec4.setText(Double.toString(cuppocino.getProductPrice()));
-
-        cuppocino.setProductImage("images/img4.png");
-        Image cuppocinocoffee = new Image(cuppocino.getProductImage());
+        namec4.setText(LoginController.cuppocino.getProductName());
+        pricec4.setText(Double.toString(LoginController.cuppocino.getProductPrice()));
+        Image cuppocinocoffee = new Image(LoginController.cuppocino.getProductImage());
         imgc4.setImage(cuppocinocoffee);
 
         // ============== Vienna ==================//
-        vienna.setProductName("Vienna");
-        namec5.setText(vienna.getProductName());
 
-        vienna.setProductPrice(5.00);
-        pricec5.setText(Double.toString(vienna.getProductPrice()));
-
-        vienna.setProductImage("images/img5.png");
-        Image viennacoffee = new Image(vienna.getProductImage());
+        namec5.setText(LoginController.vienna.getProductName());
+        pricec5.setText(Double.toString(LoginController.vienna.getProductPrice()));
+        Image viennacoffee = new Image(LoginController.vienna.getProductImage());
         imgc5.setImage(viennacoffee);
 
         // ============== Iced Coffee ==================//
 
-        icedcoffee.setProductName("Iced Coffee");
-        namec6.setText(icedcoffee.getProductName());
-
-        icedcoffee.setProductPrice(10.00);
-        pricec6.setText(Double.toString(icedcoffee.getProductPrice()));
-
-        icedcoffee.setProductImage("images/img6.png");
-        Image icedcoffeecoffee = new Image(icedcoffee.getProductImage());
-        imgc6.setImage(icedcoffeecoffee);
+        namec6.setText(LoginController.icedcoffee.getProductName());
+        pricec6.setText(Double.toString(LoginController.icedcoffee.getProductPrice()));
+        Image icedcoffeee  = new Image(LoginController.icedcoffee.getProductImage());
+        imgc6.setImage(icedcoffeee);
 
        // ============== Cortado ==================//
-       cortado.setProductName("Cortado");
-       namec7.setText(cortado.getProductName());
 
-       cortado.setProductPrice(5.00);
-       pricec7.setText(Double.toString(cortado.getProductPrice()));
-
-       cortado.setProductImage("images/img7.png");
-       Image cortadocoffee = new Image(cortado.getProductImage());
-       imgc7.setImage(cortadocoffee);
+        namec7.setText(LoginController.cortado.getProductName());
+        pricec7.setText(Double.toString(LoginController.cortado.getProductPrice()));
+        Image  cortadocoffee = new Image(LoginController.cortado.getProductImage());
+        imgc7.setImage(cortadocoffee);
 
        // ============== Breve ==================//
-       breve.setProductName("Breve");
-       namec8.setText(cortado.getProductName());
 
-       breve.setProductPrice(5.00);
-       pricec8.setText(Double.toString(breve.getProductPrice()));
-
-       breve.setProductImage("images/img8.png");
-       Image brevecoffee = new Image(breve.getProductImage());
-       imgc8.setImage(brevecoffee);
+        namec8.setText(LoginController.breve.getProductName());
+        pricec8.setText(Double.toString(LoginController.breve.getProductPrice()));
+        Image brevecoffee = new Image(LoginController.breve.getProductImage());
+        imgc8.setImage(brevecoffee);
 
       // ============== Mocha ==================//
-      mocha.setProductName("Mocha");
-      namec9.setText(mocha.getProductName());
 
-      mocha.setProductPrice(5.00);
-      pricec9.setText(Double.toString(mocha.getProductPrice()));
-
-      mocha.setProductImage("images/img9.png");
-      Image mochacoffee = new Image(mocha.getProductImage());
-      imgc9.setImage(mochacoffee);
+        namec9.setText(LoginController.mocha.getProductName());
+        pricec9.setText(Double.toString(LoginController.mocha.getProductPrice()));
+        Image mochacoffee = new Image(LoginController.mocha.getProductImage());
+        imgc9.setImage(mochacoffee);
 
       // ============== Affogato ==================//
 
-      affogato.setProductName("affogato");
-      namec10.setText(affogato.getProductName());
+        namec10.setText(LoginController.affogato.getProductName());
+        pricec10.setText(Double.toString(LoginController.affogato.getProductPrice()));
+        Image affogatocoffee = new Image(LoginController.affogato.getProductImage());
+        imgc10.setImage(affogatocoffee);
 
-      affogato.setProductPrice(10.00);
-      pricec10.setText(Double.toString(affogato.getProductPrice()));
-
-      affogato.setProductImage("images/img10.png");
-      Image affogatocoffee = new Image(affogato.getProductImage());
-      imgc10.setImage(affogatocoffee);
 
       // ==============Flat White ==================//
-      flatwhite.setProductName("flatwhite");
-      namec11.setText(flatwhite.getProductName());
 
-      flatwhite.setProductPrice(15.00);
-      pricec11.setText(Double.toString(flatwhite.getProductPrice()));
-
-      flatwhite.setProductImage("images/img11.png");
-      Image flatwhitecoffee = new Image(flatwhite.getProductImage());
-      imgc11.setImage(flatwhitecoffee);
+        namec11.setText(LoginController.flatwhite.getProductName());
+        pricec11.setText(Double.toString(LoginController.flatwhite.getProductPrice()));
+        Image flatwhitecoffee = new Image(LoginController.flatwhite.getProductImage());
+        imgc11.setImage(flatwhitecoffee);
 
       // ============== Matchalatte ==================//
 
-      matchalatte.setProductName("Matcha Latte");
-      namec12.setText(matchalatte.getProductName());
+        namec12.setText(LoginController.matchalatte.getProductName());
+        pricec12.setText(Double.toString(LoginController.matchalatte.getProductPrice()));
+        Image matchalattecoffee  = new Image(LoginController.matchalatte.getProductImage());
+        imgc12.setImage(matchalattecoffee);
 
-      matchalatte.setProductPrice(35.00);
-      pricec12.setText(Double.toString(matchalatte.getProductPrice()));
-
-      matchalatte.setProductImage("images/img12.png");
-      Image matchalattecoffee = new Image(matchalatte.getProductImage());
-      imgc12.setImage(matchalattecoffee);
-
-        try {
-            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-            root = loader.load();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-
-        // Clears all items in Checkout.fxml
-        checkoutController = loader.getController();
-        checkoutController.myvbox.getChildren().removeAll(checkoutController.myvbox.getChildren());
     }
 
     public void buy(ActionEvent event) throws IOException {
@@ -236,69 +158,93 @@ public class Coffee implements Initializable {
 
         // If addtocart button is pressed, set product status to true
         if (sourceButton.equals(Buy1)) {
-             longblack.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane1);
+            LoginController.longblack.setProductStatus(true);
+            LoginController.longblack.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane1);
         }
 
-        else if (sourceButton == (Buy2)) {
-            espresso.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane2);
+        else if (sourceButton == Buy2) {
+            LoginController.espresso.setProductStatus(true);
+            LoginController.espresso.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane2);
         }
 
-        else if (sourceButton == (Buy3)) {
-            macchiato.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane3);
+        else if (sourceButton == Buy3) {
+            LoginController.macchiato.setProductStatus(true);
+            LoginController.macchiato.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane3);
         }
 
-        else if (sourceButton == (Buy4)) {
-            cuppocino.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane4);
-        }
-        if (sourceButton.equals(Buy5)) {
-            vienna.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane5);
+        else if (sourceButton == Buy4) {
+            LoginController.cuppocino.setProductStatus(true);
+            LoginController.cuppocino.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane4);
         }
 
-        else if (sourceButton == (Buy6)) {
-            icedcoffee.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane6);
+        else if (sourceButton == Buy5) {
+            LoginController.vienna.setProductStatus(true);
+            LoginController.vienna.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane5);
         }
 
-        else if (sourceButton == (Buy7)) {
-            cortado.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane7);
+        else if (sourceButton == Buy6) {
+            LoginController.icedcoffee.setProductStatus(true);
+            LoginController.icedcoffee.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane6);
         }
 
-        else if (sourceButton == (Buy8)) {
-            breve.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane8);
+        else if (sourceButton == Buy7) {
+            LoginController.cortado.setProductStatus(true);
+            LoginController.cortado.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane7);
         }
-        else if (sourceButton == (Buy9)) {
-            mocha.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane9);
+
+        else if (sourceButton == Buy8) {
+            LoginController.breve.setProductStatus(true);
+            LoginController.breve.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane8);
         }
-        else if (sourceButton == (Buy10)) {
-            affogato.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane10);
+
+        else if (sourceButton == Buy9) {
+            LoginController.mocha.setProductStatus(true);
+            LoginController.mocha.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane9);
         }
-        else if (sourceButton == (Buy11)) {
-            flatwhite.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane11);
+        else if (sourceButton == Buy10) {
+            LoginController.affogato.setProductStatus(true);
+            LoginController.affogato.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane10);
         }
-        else if (sourceButton == (Buy12)) {
-            matchalatte.setProductStatus(true);
-            checkoutController.addItem(checkoutController.pane12);
+        else if (sourceButton == Buy11) {
+            LoginController.flatwhite.setProductStatus(true);
+            LoginController.flatwhite.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane11);
         }
+        else if (sourceButton == Buy12) {
+            LoginController.matchalatte.setProductStatus(true);
+            LoginController.matchalatte.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane12);
+        }
+
+        LoginController.cart.showItems();
     }
 
     // Goes to Checkout.fxml
     public void gotocart(ActionEvent event) throws IOException {
 
-        Scene scene = new Scene(root);
+        // Load items to cart before switching to checkout page
+        LoginController.checkoutController.showItems(LoginController.cart.getItemList());
+
+        // Set initial total amount in checkout page
+        LoginController.checkoutController.getInitialAmount();
+
+        Scene scene = new Scene(LoginController.homeRoot);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
+
+
     public void gottomenu(ActionEvent event) throws IOException {
         
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

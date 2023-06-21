@@ -34,18 +34,25 @@ public class HomeController implements Initializable {
     private Scene scene;
 
     @FXML
-    private Parent root = null;
+    static Parent homeRoot = null;
+
 
     FXMLLoader loader;
 
     @FXML
-    MenuController MenuController;
+    static MenuController MenuController;
 
     @FXML
-    AboutUsController AboutUsController;
+    static AboutUsController AboutUsController;
 
     @FXML
-    CheckoutController CheckoutController;
+    static CheckoutController CheckoutController;
+    
+    @FXML
+    static ReceiptController  receiptController;
+    
+    @FXML
+    static HomeController HomeController;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -76,16 +83,20 @@ public class HomeController implements Initializable {
 
     
 
-    public void gotocart(ActionEvent event) throws IOException {
+// Goes to Checkout.fxml
+public void gotocart(ActionEvent event) throws IOException {
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    // Load items to cart before switching to checkout page
+    LoginController.checkoutController.showItems(LoginController.cart.getItemList());
 
-    }
+    // Set initial total amount in checkout page
+    LoginController.checkoutController.getInitialAmount();
+
+    Scene scene = new Scene(LoginController.homeRoot);
+    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+}
 
    
     

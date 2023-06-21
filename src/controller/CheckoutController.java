@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -29,17 +30,17 @@ public class CheckoutController implements Initializable {
     VBox myvbox;
 
     @FXML
-    Button gotomenu;
+    Button gotomenu, checkoutbtn;
 
     @FXML
     Label  namec1, namec2, namec3, namec4, namec5, namec6, namec7, namec8,namec9, namec10, namec11, namec12, nameb13, nameb14, nameb15,
-     nameb16, nameb17, namec18, namec19, namec20, namec21, namec22, pricec1, pricec2, pricec3, pricec4, pricec5,
-     pricec6, pricec7, pricec8, pricec9, pricec10, pricec11, pricec12 , priceb13, priceb14, priceb15, priceb16, priceb17, pricec18, pricec19,
-     pricec20, pricec21, pricec22, total;
+     nameb16, nameb17, namep18, namep19, namep20, namep21, namep22, pricec1, pricec2, pricec3, pricec4, pricec5,
+     pricec6, pricec7, pricec8, pricec9, pricec10, pricec11, pricec12 , priceb13, priceb14, priceb15, priceb16, priceb17, pricep18, pricep19,
+     pricep20, pricep21, pricep22, total;
 
     @FXML
-    ImageView imgc1, imgc2, imgc3, imgc4,imgc5, imgc6, imgc7, imgc8, imgc9, imgc10, imgc11, imgc12, imgb13, imgb14, imgb15, imgb16, imgb17, imgc18,
-     imgc19, imgc20, imgc21, imgc22;
+    ImageView imgc1, imgc2, imgc3, imgc4,imgc5, imgc6, imgc7, imgc8, imgc9, imgc10, imgc11, imgc12, imgb13, imgb14, imgb15, imgb16, imgb17, imgp18,
+     imgp19, imgp20, imgp21, imgp22;
 
     @FXML
     private ChoiceBox<String> choicebox1, choicebox2, choicebox3, choicebox4, choicebox5, choicebox6, choicebox7, choicebox8, choicebox9, choicebox10, choicebox11, choicebox12, 
@@ -47,118 +48,146 @@ public class CheckoutController implements Initializable {
 
     private String[] quantity = { "1", "2", "3", "4" , "5" , "6" , "7" , "8" , "9" ,  "10" , "11" , "12" , "13" , "14" , "15" , "16" , "17" , "18" , "19" , "20" , "21" , "22" };
 
+
+    FXMLLoader loader;
+
+    @FXML
+    private Stage stage;
+
+    @FXML
+    private Scene scene;
+
+    @FXML
+    static Parent homeRoot = null;
+
+    @FXML
+    static MenuController menuController;
+
+    @FXML
+    static CheckoutController checkoutController;
+
+    @FXML
+    static AboutUsController AboutUsController;
+
+    @FXML
+    static ReceiptController receiptController;
+    
+    @FXML
+    static HomeController HomeController;
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        namec1.setText(Coffee.longblack.getProductName());
-        pricec1.setText(Double.toString(Coffee.longblack.getProductPrice()));
-        Image longblackcoffee = new Image(Coffee.longblack.getProductImage());
-        imgc1.setImage(longblackcoffee);
+        namec1.setText(LoginController.longblack.getProductName());
+        pricec1.setText(Double.toString(LoginController.longblack.getProductPrice()));
+        Image longblackLoginController = new Image(LoginController.longblack.getProductImage());
+        imgc1.setImage(longblackLoginController);
 
-        namec2.setText(Coffee.espresso.getProductName());
-        pricec2.setText(Double.toString(Coffee.espresso.getProductPrice()));
-        Image espressocoffee = new Image(Coffee.espresso.getProductImage());
-        imgc2.setImage(espressocoffee);
+        namec2.setText(LoginController.espresso.getProductName());
+        pricec2.setText(Double.toString(LoginController.espresso.getProductPrice()));
+        Image espressoLoginController = new Image(LoginController.espresso.getProductImage());
+        imgc2.setImage(espressoLoginController);
 
-        namec3.setText(Coffee.macchiato.getProductName());
-        pricec3.setText(Double.toString(Coffee.macchiato.getProductPrice()));
-        Image macchiatocoffee = new Image(Coffee.macchiato.getProductImage());
-        imgc3.setImage(macchiatocoffee);
+        namec3.setText(LoginController.macchiato.getProductName());
+        pricec3.setText(Double.toString(LoginController.macchiato.getProductPrice()));
+        Image macchiatoLoginController = new Image(LoginController.macchiato.getProductImage());
+        imgc3.setImage(macchiatoLoginController);
 
-        namec4.setText(Coffee.cuppocino.getProductName());
-        pricec4.setText(Double.toString(Coffee.cuppocino.getProductPrice()));
-        Image cuppocinocoffee = new Image(Coffee.cuppocino.getProductImage());
-        imgc4.setImage(cuppocinocoffee);
+        namec4.setText(LoginController.cuppocino.getProductName());
+        pricec4.setText(Double.toString(LoginController.cuppocino.getProductPrice()));
+        Image cuppocinoLoginController = new Image(LoginController.cuppocino.getProductImage());
+        imgc4.setImage(cuppocinoLoginController);
 
-        namec5.setText(Coffee.vienna.getProductName());
-        pricec5.setText(Double.toString(Coffee.vienna.getProductPrice()));
-        Image viennacoffee = new Image(Coffee.vienna.getProductImage());
-        imgc5.setImage(viennacoffee);
+        namec5.setText(LoginController.vienna.getProductName());
+        pricec5.setText(Double.toString(LoginController.vienna.getProductPrice()));
+        Image viennaLoginController = new Image(LoginController.vienna.getProductImage());
+        imgc5.setImage(viennaLoginController);
 
-        namec6.setText(Coffee.icedcoffee.getProductName());
-        pricec6.setText(Double.toString(Coffee.icedcoffee.getProductPrice()));
-        Image icedcoffeee = new Image(Coffee.icedcoffee.getProductImage());
-        imgc6.setImage(icedcoffeee);
+        namec6.setText(LoginController.icedcoffee.getProductName());
+        pricec6.setText(Double.toString(LoginController.icedcoffee.getProductPrice()));
+        Image icedLoginControllere = new Image(LoginController.icedcoffee.getProductImage());
+        imgc6.setImage(icedLoginControllere);
 
-        namec7.setText(Coffee.cortado.getProductName());
-        pricec7.setText(Double.toString(Coffee.cortado.getProductPrice()));
-        Image cortadocoffee = new Image(Coffee.cortado.getProductImage());
-        imgc7.setImage(cortadocoffee);
+        namec7.setText(LoginController.cortado.getProductName());
+        pricec7.setText(Double.toString(LoginController.cortado.getProductPrice()));
+        Image cortadoLoginController = new Image(LoginController.cortado.getProductImage());
+        imgc7.setImage(cortadoLoginController);
 
-        namec8.setText(Coffee.breve.getProductName());
-        pricec8.setText(Double.toString(Coffee.breve.getProductPrice()));
-        Image brevecoffee = new Image(Coffee.breve.getProductImage());
-        imgc8.setImage(brevecoffee);
+        namec8.setText(LoginController.breve.getProductName());
+        pricec8.setText(Double.toString(LoginController.breve.getProductPrice()));
+        Image breveLoginController = new Image(LoginController.breve.getProductImage());
+        imgc8.setImage(breveLoginController);
 
-        namec9.setText(Coffee.mocha.getProductName());
-        pricec9.setText(Double.toString(Coffee.mocha.getProductPrice()));
-        Image mochacoffee = new Image(Coffee.mocha.getProductImage());
-        imgc9.setImage(mochacoffee);
+        namec9.setText(LoginController.mocha.getProductName());
+        pricec9.setText(Double.toString(LoginController.mocha.getProductPrice()));
+        Image mochaLoginController = new Image(LoginController.mocha.getProductImage());
+        imgc9.setImage(mochaLoginController);
 
-        namec10.setText(Coffee.affogato.getProductName());
-        pricec10.setText(Double.toString(Coffee.affogato.getProductPrice()));
-        Image affogatocoffee = new Image(Coffee.affogato.getProductImage());
-        imgc10.setImage(affogatocoffee);
+        namec10.setText(LoginController.affogato.getProductName());
+        pricec10.setText(Double.toString(LoginController.affogato.getProductPrice()));
+        Image affogatoLoginController = new Image(LoginController.affogato.getProductImage());
+        imgc10.setImage(affogatoLoginController);
 
-        namec11.setText(Coffee.flatwhite.getProductName());
-        pricec11.setText(Double.toString(Coffee.flatwhite.getProductPrice()));
-        Image flatwhitecoffee= new Image(Coffee.flatwhite.getProductImage());
-        imgc11.setImage(flatwhitecoffee);
+        namec11.setText(LoginController.flatwhite.getProductName());
+        pricec11.setText(Double.toString(LoginController.flatwhite.getProductPrice()));
+        Image flatwhiteLoginController= new Image(LoginController.flatwhite.getProductImage());
+        imgc11.setImage(flatwhiteLoginController);
 
-        namec12.setText(Coffee.matchalatte.getProductName());
-        pricec12.setText(Double.toString(Coffee.matchalatte.getProductPrice()));
-        Image matchalattecoffee = new Image(Coffee.matchalatte.getProductImage());
-        imgc12.setImage(matchalattecoffee);
+        namec12.setText(LoginController.matchalatte.getProductName());
+        pricec12.setText(Double.toString(LoginController.matchalatte.getProductPrice()));
+        Image matchalatteLoginController = new Image(LoginController.matchalatte.getProductImage());
+        imgc12.setImage(matchalatteLoginController);
 
-        nameb13.setText(Beans.barakoeh.getProductName());
-        priceb13.setText(Double.toString(Beans.barakoeh.getProductPrice()));
-        Image barakoeh = new Image(Beans.barakoeh.getProductImage());
+        nameb13.setText(LoginController.barakoeh.getProductName());
+        priceb13.setText(Double.toString(LoginController.barakoeh.getProductPrice()));
+        Image barakoeh = new Image(LoginController.barakoeh.getProductImage());
         imgb13.setImage(barakoeh);
 
-        nameb14.setText(Beans.brobeans.getProductName());
-        priceb14.setText(Double.toString(Beans.brobeans.getProductPrice()));
-        Image brobeans = new Image(Beans.brobeans.getProductImage());
+        nameb14.setText(LoginController.brobeans.getProductName());
+        priceb14.setText(Double.toString(LoginController.brobeans.getProductPrice()));
+        Image brobeans = new Image(LoginController.brobeans.getProductImage());
         imgb14.setImage(brobeans);
 
-        nameb15.setText(Beans.coffeellera.getProductName());
-        priceb15.setText(Double.toString(Beans.coffeellera.getProductPrice()));
-        Image coffeellera = new Image(Beans.coffeellera.getProductImage());
-        imgb15.setImage(coffeellera);
+        nameb15.setText(LoginController.coffeellera.getProductName());
+        priceb15.setText(Double.toString(LoginController.coffeellera.getProductPrice()));
+        Image LoginControllerllera = new Image(LoginController.coffeellera.getProductImage());
+        imgb15.setImage(LoginControllerllera);
 
-        nameb16.setText(Beans.jordanbeans.getProductName());
-        priceb16.setText(Double.toString(Beans.jordanbeans.getProductPrice()));
-        Image jordanbeans = new Image(Beans.jordanbeans.getProductImage());
+        nameb16.setText(LoginController.jordanbeans.getProductName());
+        priceb16.setText(Double.toString(LoginController.jordanbeans.getProductPrice()));
+        Image jordanbeans = new Image(LoginController.jordanbeans.getProductImage());
         imgb16.setImage(jordanbeans);
 
-        nameb17.setText(Beans.mrbeans.getProductName());
-        priceb17.setText(Double.toString(Beans.mrbeans.getProductPrice()));
-        Image mrbeans = new Image(Beans.mrbeans.getProductImage());
+        nameb17.setText(LoginController.mrbeans.getProductName());
+        priceb17.setText(Double.toString(LoginController.mrbeans.getProductPrice()));
+        Image mrbeans = new Image(LoginController.mrbeans.getProductImage());
         imgb17.setImage(mrbeans);
 
-        namec18.setText(Pastry.cheesyensaymada.getProductName());
-        pricec18.setText(Double.toString(Pastry.cheesyensaymada.getProductPrice()));
-        Image cheesyensaymada = new Image(Pastry.cheesyensaymada.getProductImage());
-        imgc18.setImage(cheesyensaymada);
+        namep18.setText(LoginController.cheesyensaymada.getProductName());
+        pricep18.setText(Double.toString(LoginController.cheesyensaymada.getProductPrice()));
+        Image cheesyensaymada = new Image(LoginController.cheesyensaymada.getProductImage());
+        imgp18.setImage(cheesyensaymada);
 
-        namec19.setText(Pastry.glazeddonut.getProductName());
-        pricec19.setText(Double.toString(Pastry.glazeddonut.getProductPrice()));
-        Image glazeddonut = new Image(Pastry.glazeddonut.getProductImage());
-        imgc19.setImage(glazeddonut);
+        namep19.setText(LoginController.glazeddonut.getProductName());
+        pricep19.setText(Double.toString(LoginController.glazeddonut.getProductPrice()));
+        Image glazeddonut = new Image(LoginController.glazeddonut.getProductImage());
+        imgp19.setImage(glazeddonut);
 
-        namec20.setText(Pastry.pichicroissant.getProductName());
-        pricec20.setText(Double.toString(Pastry.pichicroissant.getProductPrice()));
-        Image pichicroissant = new Image(Pastry.pichicroissant.getProductImage());
-        imgc20.setImage(pichicroissant);
+        namep20.setText(LoginController.pichicroissant.getProductName());
+        pricep20.setText(Double.toString(LoginController.pichicroissant.getProductPrice()));
+        Image pichicroissant = new Image(LoginController.pichicroissant.getProductImage());
+        imgp20.setImage(pichicroissant);
 
-        namec21.setText(Pastry.sausagebacon.getProductName());
-        pricec21.setText(Double.toString(Pastry.sausagebacon.getProductPrice()));
-        Image sausagebacon = new Image(Pastry.sausagebacon.getProductImage());
-        imgc21.setImage(sausagebacon);
+        namep21.setText(LoginController.sausagebacon.getProductName());
+        pricep21.setText(Double.toString(LoginController.sausagebacon.getProductPrice()));
+        Image sausagebacon = new Image(LoginController.sausagebacon.getProductImage());
+        imgp21.setImage(sausagebacon);
 
-        namec22.setText(Pastry.tiawaffle.getProductName());
-        pricec22.setText(Double.toString(Pastry.tiawaffle.getProductPrice()));
-        Image tiawaffle = new Image(Pastry.tiawaffle.getProductImage());
-        imgc22.setImage(tiawaffle);
+        namep22.setText(LoginController.tiawaffle.getProductName());
+        pricep22.setText(Double.toString(LoginController.tiawaffle.getProductPrice()));
+        Image tiawaffle = new Image(LoginController.tiawaffle.getProductImage());
+        imgp22.setImage(tiawaffle);
 
     
 
@@ -238,28 +267,28 @@ public class CheckoutController implements Initializable {
       
 
         // Set total initial amount
-        double totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * Coffee.longblack.getProductPrice() +
-                +Double.parseDouble(choicebox2.getValue()) * Coffee.espresso.getProductPrice()
-                + Double.parseDouble(choicebox3.getValue()) * Coffee.macchiato.getProductPrice()
-                + Double.parseDouble(choicebox4.getValue()) * Coffee.cuppocino.getProductPrice()
-                + Double.parseDouble(choicebox5.getValue()) * Coffee.vienna.getProductPrice() 
-                + Double.parseDouble(choicebox6.getValue()) * Coffee.icedcoffee.getProductPrice()
-                + Double.parseDouble(choicebox7.getValue()) * Coffee.cortado.getProductPrice()
-                + Double.parseDouble(choicebox8.getValue()) * Coffee.breve.getProductPrice()
-                + Double.parseDouble(choicebox9.getValue()) * Coffee.mocha.getProductPrice()
-                + Double.parseDouble(choicebox10.getValue()) * Coffee.affogato.getProductPrice()
-                + Double.parseDouble(choicebox11.getValue()) * Coffee.flatwhite.getProductPrice()
-                + Double.parseDouble(choicebox12.getValue()) * Coffee.matchalatte.getProductPrice()
-                + Double.parseDouble(choicebox13.getValue()) * Beans.barakoeh.getProductPrice()
-                + Double.parseDouble(choicebox14.getValue()) * Beans.brobeans.getProductPrice()
-                + Double.parseDouble(choicebox15.getValue()) * Beans.coffeellera.getProductPrice()
-                + Double.parseDouble(choicebox16.getValue()) * Beans.jordanbeans.getProductPrice()
-                + Double.parseDouble(choicebox17.getValue()) * Beans.mrbeans.getProductPrice()
-                + Double.parseDouble(choicebox18.getValue()) * Pastry.cheesyensaymada.getProductPrice()
-                + Double.parseDouble(choicebox19.getValue()) * Pastry.glazeddonut.getProductPrice()
-                + Double.parseDouble(choicebox10.getValue()) * Pastry.pichicroissant.getProductPrice()
-                + Double.parseDouble(choicebox21.getValue()) * Pastry.sausagebacon.getProductPrice()
-                + Double.parseDouble(choicebox22.getValue()) * Pastry.tiawaffle.getProductPrice();
+        double totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * LoginController.longblack.getProductPrice() +
+                +Double.parseDouble(choicebox2.getValue()) * LoginController.espresso.getProductPrice()
+                + Double.parseDouble(choicebox3.getValue()) * LoginController.macchiato.getProductPrice()
+                + Double.parseDouble(choicebox4.getValue()) * LoginController.cuppocino.getProductPrice()
+                + Double.parseDouble(choicebox5.getValue()) * LoginController.vienna.getProductPrice() 
+                + Double.parseDouble(choicebox6.getValue()) * LoginController.icedcoffee.getProductPrice()
+                + Double.parseDouble(choicebox7.getValue()) * LoginController.cortado.getProductPrice()
+                + Double.parseDouble(choicebox8.getValue()) * LoginController.breve.getProductPrice()
+                + Double.parseDouble(choicebox9.getValue()) * LoginController.mocha.getProductPrice()
+                + Double.parseDouble(choicebox10.getValue()) * LoginController.affogato.getProductPrice()
+                + Double.parseDouble(choicebox11.getValue()) * LoginController.flatwhite.getProductPrice()
+                + Double.parseDouble(choicebox12.getValue()) * LoginController.matchalatte.getProductPrice()
+                + Double.parseDouble(choicebox13.getValue()) * LoginController.barakoeh.getProductPrice()
+                + Double.parseDouble(choicebox14.getValue()) * LoginController.brobeans.getProductPrice()
+                + Double.parseDouble(choicebox15.getValue()) * LoginController.coffeellera.getProductPrice()
+                + Double.parseDouble(choicebox16.getValue()) * LoginController.jordanbeans.getProductPrice()
+                + Double.parseDouble(choicebox17.getValue()) * LoginController.mrbeans.getProductPrice()
+                + Double.parseDouble(choicebox18.getValue()) * LoginController.cheesyensaymada.getProductPrice()
+                + Double.parseDouble(choicebox19.getValue()) * LoginController.glazeddonut.getProductPrice()
+                + Double.parseDouble(choicebox10.getValue()) * LoginController.pichicroissant.getProductPrice()
+                + Double.parseDouble(choicebox21.getValue()) * LoginController.sausagebacon.getProductPrice()
+                + Double.parseDouble(choicebox22.getValue()) * LoginController.tiawaffle.getProductPrice();
         
 
               
@@ -302,222 +331,222 @@ public class CheckoutController implements Initializable {
         ChoiceBox source = (ChoiceBox) event.getSource();
 
         // If product is chosen, compute item amount
-        if (Coffee.longblack.getProductStatus()) {
+        if (LoginController.longblack.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox1.getValue());
-            item1Amount = Coffee.longblack.getProductPrice() * qty;
+            item1Amount = LoginController.longblack.getProductPrice() * qty;
 
             if (source == choicebox1) {
-                item1Amount = Coffee.longblack.getProductPrice() * qty;
+                item1Amount = LoginController.longblack.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.espresso.getProductStatus()) {
+        if (LoginController.espresso.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox2.getValue());
-            item2Amount = Coffee.espresso.getProductPrice() * qty;
+            item2Amount = LoginController.espresso.getProductPrice() * qty;
 
             if (source == choicebox2) {
-                item2Amount = Coffee.espresso.getProductPrice() * qty;
+                item2Amount = LoginController.espresso.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.macchiato.getProductStatus()) {
+        if (LoginController.macchiato.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox3.getValue());
-            item3Amount = Coffee.macchiato.getProductPrice() * qty;
+            item3Amount = LoginController.macchiato.getProductPrice() * qty;
 
             if (source == choicebox3) {
-                item3Amount = Coffee.macchiato.getProductPrice() * qty;
+                item3Amount = LoginController.macchiato.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.cuppocino.getProductStatus()) {
+        if (LoginController.cuppocino.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox4.getValue());
-            item4Amount = Coffee.cuppocino.getProductPrice() * qty;
+            item4Amount = LoginController.cuppocino.getProductPrice() * qty;
 
             if (source == choicebox4) {
-                item4Amount = Coffee.cuppocino.getProductPrice() * qty;
+                item4Amount = LoginController.cuppocino.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.vienna.getProductStatus()) {
+        if (LoginController.vienna.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox5.getValue());
-            item5Amount = Coffee.vienna.getProductPrice() * qty;
+            item5Amount = LoginController.vienna.getProductPrice() * qty;
 
             if (source == choicebox5) {
-                item5Amount = Coffee.vienna.getProductPrice() * qty;
+                item5Amount = LoginController.vienna.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.icedcoffee.getProductStatus()) {
+        if (LoginController.icedcoffee.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox6.getValue());
-            item6Amount = Coffee.icedcoffee.getProductPrice() * qty;
+            item6Amount = LoginController.icedcoffee.getProductPrice() * qty;
 
             if (source == choicebox6) {
-                item2Amount = Coffee.icedcoffee.getProductPrice() * qty;
+                item2Amount = LoginController.icedcoffee.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.cortado.getProductStatus()) {
+        if (LoginController.cortado.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox7.getValue());
-            item7Amount = Coffee.cortado.getProductPrice() * qty;
+            item7Amount = LoginController.cortado.getProductPrice() * qty;
 
             if (source == choicebox7) {
-                item7Amount = Coffee.cortado.getProductPrice() * qty;
+                item7Amount = LoginController.cortado.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.breve.getProductStatus()) {
+        if (LoginController.breve.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox8.getValue());
-            item8Amount = Coffee.breve.getProductPrice() * qty;
+            item8Amount = LoginController.breve.getProductPrice() * qty;
 
             if (source == choicebox8) {
-                item8Amount = Coffee.breve.getProductPrice() * qty;
+                item8Amount = LoginController.breve.getProductPrice() * qty;
             }
         }
-        if (Coffee.mocha.getProductStatus()) {
+        if (LoginController.mocha.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox9.getValue());
-            item9Amount = Coffee.mocha.getProductPrice() * qty;
+            item9Amount = LoginController.mocha.getProductPrice() * qty;
 
             if (source == choicebox9) {
-                item9Amount = Coffee.mocha.getProductPrice() * qty;
+                item9Amount = LoginController.mocha.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.affogato.getProductStatus()) {
+        if (LoginController.affogato.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox10.getValue());
-            item10Amount = Coffee.affogato.getProductPrice() * qty;
+            item10Amount = LoginController.affogato.getProductPrice() * qty;
 
             if (source == choicebox10) {
-                item10Amount = Coffee.affogato.getProductPrice() * qty;
+                item10Amount = LoginController.affogato.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.flatwhite.getProductStatus()) {
+        if (LoginController.flatwhite.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox11.getValue());
-            item11Amount = Coffee.flatwhite.getProductPrice() * qty;
+            item11Amount = LoginController.flatwhite.getProductPrice() * qty;
 
             if (source == choicebox11) {
-                item11Amount = Coffee.flatwhite.getProductPrice() * qty;
+                item11Amount = LoginController.flatwhite.getProductPrice() * qty;
             }
         }
 
-        if (Coffee.matchalatte.getProductStatus()) {
+        if (LoginController.matchalatte.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox12.getValue());
-            item12Amount = Coffee.matchalatte.getProductPrice() * qty;
+            item12Amount = LoginController.matchalatte.getProductPrice() * qty;
 
             if (source == choicebox12) {
-                item12Amount = Coffee.matchalatte.getProductPrice() * qty;
+                item12Amount = LoginController.matchalatte.getProductPrice() * qty;
             }
         }
 
-        if (Beans.barakoeh.getProductStatus()) {
+        if (LoginController.barakoeh.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox13.getValue());
-            item13Amount = Beans.barakoeh.getProductPrice() * qty;
+            item13Amount = LoginController.barakoeh.getProductPrice() * qty;
 
             if (source == choicebox13) {
-                item13Amount = Beans.barakoeh.getProductPrice() * qty;
+                item13Amount = LoginController.barakoeh.getProductPrice() * qty;
             }
         }
 
-        if (Beans.brobeans.getProductStatus()) {
+        if (LoginController.brobeans.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox14.getValue());
-            item14Amount = Beans.brobeans.getProductPrice() * qty;
+            item14Amount = LoginController.brobeans.getProductPrice() * qty;
 
             if (source == choicebox14) {
-                item14Amount = Beans.brobeans.getProductPrice() * qty;
+                item14Amount = LoginController.brobeans.getProductPrice() * qty;
             }
         }
 
-        if (Beans.coffeellera.getProductStatus()) {
+        if (LoginController.coffeellera.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox15.getValue());
-            item15Amount = Beans.coffeellera.getProductPrice() * qty;
+            item15Amount = LoginController.coffeellera.getProductPrice() * qty;
 
             if (source == choicebox15) {
-                item15Amount = Beans.coffeellera.getProductPrice() * qty;
+                item15Amount = LoginController.coffeellera.getProductPrice() * qty;
             }
         }
 
-        if (Beans.jordanbeans.getProductStatus()) {
+        if (LoginController.jordanbeans.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox16.getValue());
-            item16Amount = Beans.jordanbeans.getProductPrice() * qty;
+            item16Amount = LoginController.jordanbeans.getProductPrice() * qty;
 
             if (source == choicebox16) {
-                item16Amount = Beans.jordanbeans.getProductPrice() * qty;
+                item16Amount = LoginController.jordanbeans.getProductPrice() * qty;
             }
         }
 
-        if (Beans.mrbeans.getProductStatus()) {
+        if (LoginController.mrbeans.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox17.getValue());
-            item17Amount = Beans.mrbeans.getProductPrice() * qty;
+            item17Amount = LoginController.mrbeans.getProductPrice() * qty;
 
             if (source == choicebox17) {
-                item17Amount = Beans.mrbeans.getProductPrice() * qty;
+                item17Amount = LoginController.mrbeans.getProductPrice() * qty;
             }
         }
 
-        if (Pastry.cheesyensaymada.getProductStatus()) {
+        if (LoginController.cheesyensaymada.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox18.getValue());
-            item18Amount = Pastry.cheesyensaymada.getProductPrice() * qty;
+            item18Amount = LoginController.cheesyensaymada.getProductPrice() * qty;
 
             if (source == choicebox18) {
-                item18Amount = Pastry.cheesyensaymada.getProductPrice() * qty;
+                item18Amount = LoginController.cheesyensaymada.getProductPrice() * qty;
             }
         }
 
-        if (Pastry.glazeddonut.getProductStatus()) {
+        if (LoginController.glazeddonut.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox19.getValue());
-            item19Amount = Pastry.glazeddonut.getProductPrice() * qty;
+            item19Amount = LoginController.glazeddonut.getProductPrice() * qty;
 
             if (source == choicebox19) {
-                item19Amount = Pastry.glazeddonut.getProductPrice() * qty;
+                item19Amount = LoginController.glazeddonut.getProductPrice() * qty;
             }
         }
 
-        if (Pastry.pichicroissant.getProductStatus()) {
+        if (LoginController.pichicroissant.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox20.getValue());
-            item20Amount = Pastry.pichicroissant.getProductPrice() * qty;
+            item20Amount = LoginController.pichicroissant.getProductPrice() * qty;
 
             if (source == choicebox20) {
-                item20Amount = Pastry.pichicroissant.getProductPrice() * qty;
+                item20Amount = LoginController.pichicroissant.getProductPrice() * qty;
             }
         }
 
-        if (Pastry.sausagebacon.getProductStatus()) {
+        if (LoginController.sausagebacon.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox21.getValue());
-            item21Amount = Pastry.sausagebacon.getProductPrice() * qty;
+            item21Amount = LoginController.sausagebacon.getProductPrice() * qty;
 
             if (source == choicebox21) {
-                item21Amount = Pastry.sausagebacon.getProductPrice() * qty;
+                item21Amount = LoginController.sausagebacon.getProductPrice() * qty;
             }
         }
 
-        if (Pastry.tiawaffle.getProductStatus()) {
+        if (LoginController.tiawaffle.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox22.getValue());
-            item22Amount = Pastry.tiawaffle.getProductPrice() * qty;
+            item22Amount = LoginController.tiawaffle.getProductPrice() * qty;
 
             if (source == choicebox22) {
-                item22Amount = Pastry.tiawaffle.getProductPrice() * qty;
+                item22Amount = LoginController.tiawaffle.getProductPrice() * qty;
             }
         }
 
@@ -528,6 +557,102 @@ public class CheckoutController implements Initializable {
 
         // Display total amount in total label
         total.setText(Double.toString(totalAmount));
+    }
+
+    
+    // Computes initial Amount before modifying item quantity
+    public void getInitialAmount() {
+
+        double totalAmount = 0.00;
+      ///coffeee
+        if (LoginController.longblack.getProductStatus()) {
+            totalAmount += LoginController.longblack.getProductPrice();
+        }
+
+        if (LoginController.espresso.getProductStatus()) {
+            totalAmount += LoginController.espresso.getProductPrice();
+        }
+
+        if (LoginController.macchiato.getProductStatus()) {
+            totalAmount += LoginController.macchiato.getProductPrice();
+        }
+
+        if (LoginController.cuppocino.getProductStatus()) {
+            totalAmount += LoginController.cuppocino.getProductPrice();
+        }
+        if (LoginController.vienna.getProductStatus()) {
+            totalAmount += LoginController.vienna.getProductPrice();
+        }
+
+        if (LoginController.icedcoffee.getProductStatus()) {
+            totalAmount += LoginController.icedcoffee.getProductPrice();
+        }
+
+        if (LoginController.cortado.getProductStatus()) {
+            totalAmount += LoginController.cortado.getProductPrice();
+        }
+
+        if (LoginController.breve.getProductStatus()) {
+            totalAmount += LoginController.breve.getProductPrice();
+        }
+        if (LoginController.mocha.getProductStatus()) {
+            totalAmount += LoginController.mocha.getProductPrice();
+        }
+
+        if (LoginController.affogato.getProductStatus()) {
+            totalAmount += LoginController.affogato.getProductPrice();
+        }
+
+        if (LoginController.flatwhite.getProductStatus()) {
+            totalAmount += LoginController.flatwhite.getProductPrice();
+        }
+
+        if (LoginController.matchalatte.getProductStatus()) {
+            totalAmount += LoginController.matchalatte.getProductPrice();
+        }
+
+        ///beans
+
+        if (LoginController.barakoeh.getProductStatus()) {
+            totalAmount += LoginController.longblack.getProductPrice();
+        }
+
+        if (LoginController.espresso.getProductStatus()) {
+            totalAmount += LoginController.espresso.getProductPrice();
+        }
+
+        if (LoginController.macchiato.getProductStatus()) {
+            totalAmount += LoginController.macchiato.getProductPrice();
+        }
+
+        if (LoginController.cuppocino.getProductStatus()) {
+            totalAmount += LoginController.cuppocino.getProductPrice();
+        }
+        if (LoginController.vienna.getProductStatus()) {
+            totalAmount += LoginController.vienna.getProductPrice();
+        }
+
+      
+        total.setText(Double.toString(totalAmount));
+    }
+
+    // Go to Receipt Page
+    public void checkout(ActionEvent event) throws IOException {
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Receipt.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    // Show all items in ArrayList
+    public void showItems(ArrayList<Pane> itemList) {
+        for (Pane p : itemList) {
+            myvbox.getChildren().add(p);
+        }
     }
 
     public void gottomenu(ActionEvent event) throws IOException {

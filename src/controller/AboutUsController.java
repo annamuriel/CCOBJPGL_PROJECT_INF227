@@ -29,13 +29,26 @@ public class AboutUsController  implements Initializable  {
     @FXML
     private Scene scene;
 
-    @FXML
-    private Parent root = null;
 
     FXMLLoader loader;
 
     @FXML
-    HomeController HomeController;
+    static HomeController HomeController;
+
+    @FXML
+    static Parent homeRoot = null;
+
+    @FXML
+    static MenuController menuController;
+
+    @FXML
+    static CheckoutController checkoutController;
+
+    @FXML
+    static AboutUsController AboutUsController;
+
+    @FXML
+    static ReceiptController receiptController;
 
 
     @Override
