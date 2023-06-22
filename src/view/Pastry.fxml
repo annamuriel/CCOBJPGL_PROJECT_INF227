@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PastryController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="800.0" prefWidth="1300.0" vbarPolicy="ALWAYS">
+         <content>
+            <Pane prefHeight="1300.0" prefWidth="1300.0">
+               <children>
+                  <ImageView fitHeight="1308.0" fitWidth="899.0" layoutX="401.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/823486a158b1b4c54fa97524664f68aa.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="1308.0" fitWidth="899.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/823486a158b1b4c54fa97524664f68aa.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="41.0" layoutY="100.0" prefHeight="511.0" prefWidth="564.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <Button fx:id="button5" layoutX="396.0" layoutY="449.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: #36454F; -fx-background-radius: 150;" text="Add to Cart" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fx:id="img5" fitHeight="506.0" fitWidth="468.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/p1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name5" layoutX="380.0" layoutY="377.0" text="CROISSANT" textFill="#c9c6c6">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="price5" layoutX="418.0" layoutY="415.0" text="21.99" textFill="#b5b4b4">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="657.0" layoutY="100.0" prefHeight="650.0" prefWidth="620.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img6" fitHeight="651.0" fitWidth="438.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/p2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name6" layoutX="448.0" layoutY="275.0" text="COOKIES" textFill="#fff3f3">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="price6" layoutX="486.0" layoutY="318.0" text="15.99" textFill="#e4dcdc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button6" layoutX="461.0" layoutY="345.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: #36454F; -fx-background-radius: 150;" text="Add to Cart" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="681.0" layoutY="760.0" prefHeight="528.0" prefWidth="573.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img8" fitHeight="529.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/p4.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name8" layoutX="380.0" layoutY="377.0" text="CINNAMON" textFill="#c9c6c6">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="price8" layoutX="418.0" layoutY="415.0" text="21.99" textFill="#b5b4b4">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button8" layoutX="396.0" layoutY="449.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: #36454F; -fx-background-radius: 150;" text="Add to Cart" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="660.0" prefHeight="602.0" prefWidth="617.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img7" fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/p3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name7" layoutX="430.0" layoutY="277.0" prefHeight="41.0" prefWidth="157.0" text="PANDESAL" textFill="#c9afaf">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="price7" layoutX="490.0" layoutY="320.0" text="9.99" textFill="#f5eaea">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button7" layoutX="460.0" layoutY="359.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: #36454F; -fx-background-radius: 150;" text="Add to Cart" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <Pane opacity="0.73" prefHeight="93.0" prefWidth="1300.0" style="-fx-background-color: #1B1212;">
+         <children>
+            <Button fx:id="homebutton" layoutX="1037.0" layoutY="-7.0" mnemonicParsing="false" onAction="#gotohome" prefHeight="93.0" prefWidth="92.0" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/png-clipart-logo-house-home-house-angle-building-thumbnail-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="cartbutton" layoutX="1154.0" mnemonicParsing="false" onAction="#gotocart" prefHeight="93.0" prefWidth="145.0" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="96.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/shopping-cart-icon-product-return-shopping-cart-png-32c2d621f780db39d4b1170c31bd1a1e.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="217.0" fitWidth="244.0" layoutX="-20.0" layoutY="-62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Tia-Beanie/src/images/tiabeanielogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="536.0" layoutY="16.0" text="- PASTRY -" textFill="#e1a471">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="47.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

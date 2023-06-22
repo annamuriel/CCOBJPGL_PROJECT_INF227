@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
+   <children>
+      <Pane layoutX="929.0" prefHeight="800.0" prefWidth="378.0" style="-fx-background-color: c7a68f;">
+         <children>
+            <ImageView fitHeight="633.0" fitWidth="513.0" layoutX="-130.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/3ddc0f89ed7b91010695b7624993d3da.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="34.0" layoutY="636.0" text="Total" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="677.0" text="Sub-Total:" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="checkoutbutton" layoutX="134.0" layoutY="741.0" mnemonicParsing="false" onAction="#checkout" style="-fx-background-color: a37351; -fx-background-radius: 150;" text="CHECKOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="total" layoutX="283.0" layoutY="677.0" text="15.00" textFill="#4a4141">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="221.0" fitWidth="278.0" layoutX="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/images/tiabeanielogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="800.0" prefWidth="929.0" vbarPolicy="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2493.0" prefWidth="950.0" style="-fx-background-color: b48868;">
+               <children>
+                  <VBox fx:id="myvbox" layoutY="-2.0" prefHeight="2502.0" prefWidth="950.0">
+                     <children>
+                        <Pane fx:id="pane1" prefHeight="250.0" prefWidth="1141.0" style="-fx-background-color: faf8f6;">
+                           <children>
+                              <ImageView fx:id="img1" fitHeight="237.0" fitWidth="241.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/c1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price1" layoutX="304.0" layoutY="52.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name1" layoutX="304.0" layoutY="100.0" text="ESPRESSO" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox1" layoutX="304.0" layoutY="145.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane fx:id="pane2" prefHeight="250.0" prefWidth="1141.0" style="-fx-background-color: eaded6;">
+                           <children>
+                              <ImageView fx:id="img2" fitHeight="232.0" fitWidth="157.0" layoutX="48.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/c3.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price2" layoutX="307.0" layoutY="26.0" text="10.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name2" layoutX="307.0" layoutY="74.0" text="AFFOGATO" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox2" layoutX="307.0" layoutY="125.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane fx:id="pane3" prefHeight="250.0" prefWidth="550.0" style="-fx-background-color: dac4b5;">
+                           <children>
+                              <ImageView fx:id="img3" fitHeight="275.0" fitWidth="158.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/c2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price3" layoutX="303.0" layoutY="38.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name3" layoutX="303.0" layoutY="86.0" text="MATCHA" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox3" layoutX="303.0" layoutY="150.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane fx:id="pane4" prefHeight="250.0" prefWidth="1141.0" style="-fx-background-color: caaa94;">
+                           <children>
+                              <ImageView fx:id="img4" fitHeight="233.0" fitWidth="163.0" layoutX="48.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/c4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price4" layoutX="299.0" layoutY="52.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name4" layoutX="299.0" layoutY="100.0" text="CUPPOCINO" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox4" layoutX="299.0" layoutY="150.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: ba9073;">
+                           <children>
+                              <ImageView fx:id="img5" fitHeight="234.0" fitWidth="163.0" layoutX="45.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/p1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price5" layoutX="298.0" layoutY="52.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name5" layoutX="298.0" layoutY="100.0" prefHeight="27.0" prefWidth="141.0" text="CROISSANT" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox5" layoutX="298.0" layoutY="150.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: a97653;">
+                           <children>
+                              <ImageView fx:id="img6" fitHeight="237.0" fitWidth="160.0" layoutX="43.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/p2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price6" layoutX="291.0" layoutY="52.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name6" layoutX="291.0" layoutY="100.0" text="COOKIES" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox6" layoutX="291.0" layoutY="150.0" prefWidth="150.0" style="-fx-background-color: d7c0af; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane7" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: f8f4f1;">
+                           <children>
+                              <ImageView fx:id="img7" fitHeight="242.0" fitWidth="162.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/p3.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price7" layoutX="292.0" layoutY="53.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name7" layoutX="292.0" layoutY="101.0" text="PANDESAL" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox7" layoutX="292.0" layoutY="151.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane8" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: e8dad0;">
+                           <children>
+                              <ImageView fx:id="img8" fitHeight="241.0" fitWidth="161.0" layoutX="37.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/p4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price8" layoutX="288.0" layoutY="53.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name8" layoutX="288.0" layoutY="100.0" text="CINNAMON" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox8" layoutX="288.0" layoutY="151.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane9" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: d7c0af;">
+                           <children>
+                              <ImageView fx:id="img9" fitHeight="236.0" fitWidth="191.0" layoutX="23.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/b1jpg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price9" layoutX="287.0" layoutY="41.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name9" layoutX="287.0" layoutY="89.0" text="AFOGATO" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox9" layoutX="287.0" layoutY="139.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane10" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: b78c6e;">
+                           <children>
+                              <ImageView fx:id="img10" fitHeight="240.0" fitWidth="145.0" layoutX="43.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/b2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price10" layoutX="288.0" layoutY="53.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name10" layoutX="288.0" layoutY="101.0" text="ROBUSTA" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox10" layoutX="288.0" layoutY="151.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane11" prefHeight="250.0" prefWidth="1210.0" style="-fx-background-color: 9e6f4e;">
+                           <children>
+                              <ImageView fx:id="img11" fitHeight="242.0" fitWidth="250.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/b3.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="price11" layoutX="284.0" layoutY="53.0" text="5.00" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name11" layoutX="284.0" layoutY="101.0" prefHeight="27.0" prefWidth="137.0" text="LIBARIC" textFill="#4a4141">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="choicebox11" layoutX="284.0" layoutY="151.0" prefWidth="150.0" style="-fx-background-color: a97653; -fx-background-radius: 50;" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

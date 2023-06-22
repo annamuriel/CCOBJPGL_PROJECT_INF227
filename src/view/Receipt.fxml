@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="totl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReceiptController">
+   <children>
+      <ImageView fitHeight="813.0" fitWidth="1300.0" layoutX="1.0" layoutY="-11.0">
+         <image>
+            <Image url="@../../../../Downloads/Premium%20Photo%20_%20Top%20view%20roasted%20coffee%20beans%20with%20copy%20space.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="46.0" layoutY="32.0" prefHeight="737.0" prefWidth="473.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="185.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Philippines, MNL">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="197.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1234 Bean St.">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="193.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manila, PH 3425">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="221.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8-7000">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="71.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="----------------------------------------------">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="275.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="358.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="73.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY / Item Name">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="70.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="----------------------------------------------">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="70.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total to pay:">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="70.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="----------------------------------------------">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="167.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store closes at 11 pm ">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="99.0" layoutY="701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for shopping. Please come again.">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="70.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="==============================================">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="72.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: 06/06/23   12:51">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="72.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff: potatochan">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="303.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slip: 69420123">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="303.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trans: 123420">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="product1" layoutX="131.0" layoutY="200.0" text="." />
+            <Label fx:id="product2" layoutX="131.0" layoutY="217.0" text="." />
+            <Label fx:id="product3" layoutX="131.0" layoutY="234.0" text="." />
+            <Label fx:id="product4" layoutX="131.0" layoutY="251.0" text="." />
+            <Label fx:id="product5" layoutX="131.0" layoutY="268.0" text="." />
+            <Label fx:id="product6" layoutX="131.0" layoutY="285.0" text="." />
+            <Label fx:id="product7" layoutX="131.0" layoutY="302.0" text="." />
+            <Label fx:id="product8" layoutX="131.0" layoutY="319.0" text="." />
+            <Label fx:id="product9" layoutX="131.0" layoutY="336.0" text="." />
+            <Label fx:id="product10" layoutX="131.0" layoutY="353.0" text="." />
+            <Label fx:id="product11" layoutX="131.0" layoutY="365.0" text="." />
+            <Label fx:id="product12" layoutX="131.0" layoutY="382.0" text="." />
+            <Label fx:id="price1" layoutX="273.0" layoutY="200.0" text="." />
+            <Label fx:id="price2" layoutX="273.0" layoutY="217.0" text="." />
+            <Label fx:id="price3" layoutX="273.0" layoutY="234.0" text="." />
+            <Label fx:id="price4" layoutX="273.0" layoutY="251.0" text="." />
+            <Label fx:id="price5" layoutX="273.0" layoutY="268.0" text="." />
+            <Label fx:id="price6" layoutX="273.0" layoutY="285.0" text="." />
+            <Label fx:id="price7" layoutX="273.0" layoutY="302.0" text="." />
+            <Label fx:id="price8" layoutX="273.0" layoutY="319.0" text="." />
+            <Label fx:id="price9" layoutX="273.0" layoutY="336.0" text="." />
+            <Label fx:id="price10" layoutX="273.0" layoutY="353.0" text="." />
+            <Label fx:id="price11" layoutX="273.0" layoutY="365.0" text="." />
+            <Label fx:id="price12" layoutX="273.0" layoutY="382.0" text="." />
+            <Label fx:id="amount1" layoutX="359.0" layoutY="200.0" text="." />
+            <Label fx:id="amount2" layoutX="359.0" layoutY="217.0" text="." />
+            <Label fx:id="amount3" layoutX="359.0" layoutY="234.0" text="." />
+            <Label fx:id="amount4" layoutX="359.0" layoutY="251.0" text="." />
+            <Label fx:id="amount5" layoutX="359.0" layoutY="268.0" text="." />
+            <Label fx:id="amount6" layoutX="359.0" layoutY="285.0" text="." />
+            <Label fx:id="amount7" layoutX="359.0" layoutY="302.0" text="." />
+            <Label fx:id="amount8" layoutX="359.0" layoutY="319.0" text="." />
+            <Label fx:id="amount9" layoutX="359.0" layoutY="336.0" text="." />
+            <Label fx:id="amount10" layoutX="359.0" layoutY="353.0" text="." />
+            <Label fx:id="amount11" layoutX="359.0" layoutY="365.0" text="." />
+            <Label fx:id="amount12" layoutX="359.0" layoutY="382.0" text="." />
+            <Label fx:id="qty1" layoutX="64.0" layoutY="203.0" text="." />
+            <Label fx:id="qty2" layoutX="64.0" layoutY="220.0" text="." />
+            <Label fx:id="qty3" layoutX="64.0" layoutY="237.0" text="." />
+            <Label fx:id="qty4" layoutX="64.0" layoutY="254.0" text="." />
+            <Label fx:id="qty5" layoutX="64.0" layoutY="271.0" text="." />
+            <Label fx:id="qty6" layoutX="64.0" layoutY="288.0" text="." />
+            <Label fx:id="qty7" layoutX="64.0" layoutY="305.0" text="." />
+            <Label fx:id="qty8" layoutX="64.0" layoutY="322.0" text="." />
+            <Label fx:id="qty9" layoutX="64.0" layoutY="339.0" text="." />
+            <Label fx:id="qty10" layoutX="64.0" layoutY="356.0" text="." />
+            <Label fx:id="qty11" layoutX="64.0" layoutY="368.0" text="." />
+            <Label fx:id="qty12" layoutX="64.0" layoutY="385.0" text="." />
+            <Label fx:id="total" layoutX="317.0" layoutY="542.0" prefHeight="14.0" prefWidth="55.0" text="Label" />
+            <ImageView fitHeight="155.0" fitWidth="188.0" layoutX="157.0" layoutY="-40.0">
+               <image>
+                  <Image url="@../../../../Downloads/tiabeanielogo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="665.0" layoutY="77.0" prefHeight="223.0" prefWidth="518.0" style="-fx-background-color: #023020; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="9.0" layoutY="57.0" text="How would you rate your experience in our store" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="rateus" layoutX="198.0" layoutY="112.0" mnemonicParsing="false" onAction="#gotorateus" prefHeight="51.0" prefWidth="122.0" style="-fx-background-color: ba9073;" text="RATE US">
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThankYouController">
+   <children>
+      <ImageView fx:id="TYPbg" blendMode="SRC_ATOP" fitHeight="823.0" fitWidth="1416.0" layoutX="-99.0" layoutY="-11.0">
+         <image>
+            <Image url="@../../../../Downloads/bgg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="402.0" layoutY="260.0" prefHeight="280.0" prefWidth="496.0" style="-fx-background-color: #023020;">
+         <children>
+            <ImageView fx:id="logoImg" fitHeight="163.0" fitWidth="178.0" layoutX="159.0" layoutY="-19.0">
+               <image>
+                  <Image url="@../../../../Downloads/images/tiabeanielogo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="192.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You" textAlignment="CENTER" wrappingWidth="111.20000000000005">
+               <font>
+                  <Font name="Constantia Bold Italic" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="154.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for your purchase!" textAlignment="CENTER" wrappingWidth="187.20000000000005">
+               <font>
+                  <Font name="Constantia Bold Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

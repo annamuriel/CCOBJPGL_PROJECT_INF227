@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="1300.0" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #634832;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS">
+         <content>
+            <Pane prefHeight="1196.0" prefWidth="1369.0">
+               <children>
+                  <ImageView fitHeight="1388.0" fitWidth="1308.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/Homebg.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutY="89.0" prefHeight="458.0" prefWidth="882.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img1" fitHeight="466.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/homecoffee.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="521.0" layoutY="183.0" prefHeight="34.0" prefWidth="274.0" text="COFFEE" textFill="#ffdddd">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button1" layoutX="1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#gotocoffee" prefHeight="460.0" prefWidth="880.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="897.0" layoutY="89.0" prefHeight="691.0" prefWidth="385.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img2" fitHeight="514.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/pastrymenu.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="97.0" layoutY="545.0" prefHeight="34.0" prefWidth="274.0" text="PASTRY" textFill="#ffdddd">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button2" layoutX="3.0" layoutY="1.0" mnemonicParsing="false" onAction="#gotopastry" prefHeight="676.0" prefWidth="379.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="568.0" fitWidth="500.0" layoutX="900.0" layoutY="790.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/menuc.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="22.0" layoutY="559.0" prefHeight="362.0" prefWidth="854.0" style="-fx-background-color: #1B1212;">
+                     <children>
+                        <ImageView fx:id="img3" fitHeight="354.0" fitWidth="561.0" layoutX="322.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/beansmenu.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="98.0" prefHeight="34.0" prefWidth="274.0" text="BEANS" textFill="#ffdddd">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button3" layoutX="-7.0" mnemonicParsing="false" onAction="#gotobeans" prefHeight="460.0" prefWidth="880.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="568.0" fitWidth="500.0" layoutX="376.0" layoutY="929.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/menus.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="622.0" fitWidth="365.0" layoutX="39.0" layoutY="929.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/menu.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <Pane opacity="0.89" prefHeight="87.0" prefWidth="1300.0" style="-fx-background-color: #38220f;">
+         <children>
+            <Button fx:id="Aboutus" layoutX="971.0" layoutY="3.0" mnemonicParsing="false" onAction="#gotoaboutus" prefHeight="87.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="ABOUT US" textFill="#ffeded">
+               <font>
+                  <Font name="Century Gothic Bold" size="35.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="198.0" fitWidth="196.0" layoutX="-19.0" layoutY="-51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Tia-Beanie/src/images/tiabeanielogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="168.0" layoutX="1195.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/shopping-cart-icon-product-return-shopping-cart-png-32c2d621f780db39d4b1170c31bd1a1e.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="checkout" layoutX="1190.0" layoutY="-6.0" mnemonicParsing="false" onAction="#gotocart" opacity="0.04" prefHeight="104.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="ggggg" textFill="#ffeded">
+               <font>
+                  <Font name="Century Gothic Bold" size="35.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="459.0" layoutY="13.0" text="- HOME -" textFill="#b27a5c">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="52.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
